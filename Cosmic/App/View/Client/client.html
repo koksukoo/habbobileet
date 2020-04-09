@@ -1,0 +1,102 @@
+{% if player %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+    <meta name="robots" content="noindex, nofollow">
+    <title>Hotel - {{site.shortname}}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/flaticon.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/selectric.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/circle.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/web.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/web.responsive.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/nanoscroller.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/fonts.css?v={{revision}}">
+    <link rel="stylesheet" href="/assets/css/hotel/hotel.css?v={{revision}}">
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery-3.2.1.min.js?v={{revision}}"></script>
+    <script src="/assets/js/jquery-ui.min.js?v={{revision}}"></script>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div id="loading-background" style="background: linear-gradient(-45deg, #000, #000, #000, #000);"></div>
+        <div class="loading-content">
+            <div class="loading-bodytext">
+                {{site.shortname}} is loading...
+            </div>
+        </div>
+    </div>
+
+    <div id="client-ui">
+        <div id="flash-wrapper">
+            <div id="flash-container">
+                <noscript>
+                    <style>
+                        .loading-container {
+                            display: none;
+                        }
+                    </style>
+
+                    <object width="100%" height="100%" id="flash-container" type="application/x-shockwave-flash"
+                        style="visibility: visible;">
+                        <param name="allowScriptAccess" value="always">
+                        <param name="menu" value="false">
+                        <param name="wmode" value="opaque">
+                        <param name="flashvars"
+                            value="client.allow.cross.domain=1&amp;client.notify.cross.domain=0&amp;connection.info.host=193.70.80.164&amp;connection.info.port=30000,843&amp;site.url=https://www.leet.ws&amp;url.prefix=https://www.leet.ws&amp;client.reload.url=//leet.ws/client?e&amp;client.fatal.error.url=//leet.ws/client?e&amp;client.connection.failed.url=//leet.ws/client?e&amp;external.hash=&amp;external.variables.txt=https://images.leet.ws/library/gamedata/external_variables.txt&amp;productdata.load.url=https://images.leet.ws/library/gamedata/productdata.txt&amp;furnidata.load.url=https://images.leet.ws/library/gamedata/furnidata.xml&amp;external.figurepartlist.txt=https://images.leet.ws/library/gamedata/figuredata.xml&amp;flash.dynamic.avatar.download.configuration=https://images.leet.ws/library/gamedata/figuremap.xml&amp;external.texts.txt=https://images.leet.ws/library/gamedata/external_flash_texts.txt&amp;external.override.texts.txt=https://images.leet.ws/library/gamedata/override/external_flash_texts.txt&amp;external.override.variables.txt=https://images.leet.ws/library/gamedata/override/external_variables.txt&amp;use.sso.ticket=1&amp;sso.ticket={{player.auth_ticket}}&amp;processlog.enabled=0&amp;account_id={{player.id}}&amp;client.starting=Leet is aan het laden...&amp;flash.client.url=https://images.leet.ws/library/&amp;user.hash=&amp;has.identity=0&amp;flash.client.origin=popup">
+                    </object>
+                </noscript>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var hide_flash_missing = false;
+    </script>
+
+    <div id="tubeplayer">
+        <div id="swg-drag" draggable="true" class="grabbable" style="position: absolute; left: 20px; top: 40px;">
+            <img src="/assets/images/drag.svg" class="drag-icon">
+            <img src="/assets/images/min.svg" class="min-icon">
+            <iframe src="https://player.twitch.tv/?channel=joonas187" frameborder="0" allowfullscreen="true"
+                scrolling="no" height="220" width="360"></iframe><a
+                href="https://www.twitch.tv/joonas187?tt_content=text_link&tt_medium=live_embed"
+                style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Puioissa:
+                KlubbenJoonas</a></div>
+    </div>
+    <script>
+        // Player url per room id
+        window.SwaegPlayerUrls = {
+            'default': 'https://player.twitch.tv/?channel=joonas187',
+            '2': 'https://player.twitch.tv/?channel=jhhtl'
+        };
+    </script>
+
+    <script src="/assets/js/web/web.locale.js?v={{revision}}"></script>
+    <script src="/assets/js/web/user_settings.js?v={{revision}}"></script>
+    <script src="/assets/js/functions.js?v={{revision}}"></script>
+    <script src="/assets/js/hotel/swfobject.js?v={{revision}}"></script>
+    <script src="/assets/js/jquery.scrollbar.js?v={{revision}}"></script>
+    <script src="/assets/js/selectric.js?v={{revision}}"></script>
+    <script src="/assets/js/range-slider.js?v={{revision}}"></script>
+    <script src="/assets/js/moment.js?v={{revision}}"></script>
+    <script src="/assets/js/functions.js?v={{revision}}"></script>
+    <script src="/assets/js/particles.min.js?v={{revision}}"></script>
+    <script src="/assets/js/hotel/hotel.js?v={{date().timestamp}}"></script>
+    <script src="/assets/js/hotel/currentRoomClient.js?v={{date().timestamp}}"></script>
+    <script src="/assets/js/hotel/swaegPlayer.js?v={{date().timestamp}}"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>
+{% endif %}
